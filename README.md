@@ -23,8 +23,6 @@ Prevention:
 - Confirm that the user-agent string used for a request matches the user-agent string at login.
 - Determine if the origin of request is coming from source origin, as well as where the request is going. 
 
-<img src="Session Hijacking Blue.gif">
-
 ![Session Hijacking Blue](https://github.com/CyberDefender369/Pen-Testing-Live-Targets/assets/96165986/318f8e00-791d-4c62-88a6-23d4f4d70991)
 
 
