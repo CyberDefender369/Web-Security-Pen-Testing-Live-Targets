@@ -50,6 +50,14 @@ Prevention:
 
 Vulnerability: Insecure Direct Object Reference (IDOR)
 
-Description: Not being logged in, change ?id=1 to ?id=2 and increase number by 1 until 12 is reached. Blue and Green versions of the Globitek website return the same results as the Red version until ?id=10 and ?id=11 are entered. Only the Red version returned sensitive information that was not intended for public disclosure.
+Exploitation Steps: 
+- Change ?id=1 to ?id=2.
+- Increase number by 1 until 12 is reached.
+- ?id=10 and ?id=11 return senstive information that was not intended for public disclosure.
 
-<img src="IDOR Red.gif">
+Prevention:
+- 
+
+
+
+![IDOR Red](https://github.com/CyberDefender369/Web-Security-Pen-Testing-Live-Targets/assets/96165986/76ad34dd-9987-404c-8012-4ecde7d2b1ec)
