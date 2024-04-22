@@ -10,7 +10,7 @@ This project documents web vulnerabilities, each originating from a different we
 Vulnerability: Session Hijacking
 
 Exploitation Steps:
-- Two different web browsers are used: Firefox is the target and Edge is attacker.
+- Two different web browsers are used (Firefox is the target and Edge is attacker).
 - Login with credentials on Firefox.
 - Change URL on Firefox from https://35.184.88.145/blue/public/staff/index.php to https://35.184.88.145/blue/public/hacktools/change_session_id.php to obtain current session ID.
 - Go to Edge and change URL from https://35.184.88.145/blue/public/index.php to https://35.184.88.145/blue/public/hacktools/change_session_id.php.
@@ -30,9 +30,20 @@ Prevention:
 
 Vulnerability: Cross-Site Scripting (XSS)
 
-Description: Go to the Globitek contact page. Enter and submit name, email, and script (<script>alert('Graciano found the XSS!');</script>
-). Login with credentials. Click the feedback tab in the menu page and playload is displayed.
-<img src="XSS Green.gif">
+Exploitation Steps: 
+- Go to the Globitek contact page.
+- Enter name, email, and script (<script>alert('Graciano found the XSS!');</script>).
+- Login with credentials.
+- Click the feedback tab in the menu page.
+- Payload is displayed.
+
+Prevention:
+- Validate user input.
+- Sanitize data before output.
+- Encode output
+- Apply allowlists and blocklists. 
+  
+![XSS Green](https://github.com/CyberDefender369/Web-Security-Pen-Testing-Live-Targets/assets/96165986/43148303-e7ba-415e-8d42-17417af126fe)
 
 
 ## Red
