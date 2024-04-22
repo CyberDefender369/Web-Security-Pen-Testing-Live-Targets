@@ -18,12 +18,12 @@ Exploitation Steps:
 - Change URL on Edge back to https://35.184.88.145/blue/public/index.php.
 - No credentials were needed to login. 
 
+![Session Hijacking Blue](https://github.com/CyberDefender369/Pen-Testing-Live-Targets/assets/96165986/318f8e00-791d-4c62-88a6-23d4f4d70991)
+
 Prevention: 
 - Session ID should be a long and unique number to eliminate random guessing.
 - Confirm that the user-agent string used for a request matches the user-agent string at login.
 - Determine if the origin of request is coming from source origin, as well as where the request is going. 
-
-![Session Hijacking Blue](https://github.com/CyberDefender369/Pen-Testing-Live-Targets/assets/96165986/318f8e00-791d-4c62-88a6-23d4f4d70991)
 
 
 ## Green
@@ -37,14 +37,14 @@ Exploitation Steps:
 - Click the feedback tab in the menu page.
 - Payload is displayed.
 
+![XSS Green](https://github.com/CyberDefender369/Web-Security-Pen-Testing-Live-Targets/assets/96165986/43148303-e7ba-415e-8d42-17417af126fe)
+
 Prevention:
 - Validate user input.
 - Sanitize data before output.
 - Encode output
 - Apply allowlists and blocklists. 
   
-![XSS Green](https://github.com/CyberDefender369/Web-Security-Pen-Testing-Live-Targets/assets/96165986/43148303-e7ba-415e-8d42-17417af126fe)
-
 
 ## Red
 
@@ -55,9 +55,11 @@ Exploitation Steps:
 - Increase number by 1 until 12 is reached.
 - ?id=10 and ?id=11 return senstive information that was not intended for public disclosure.
 
-Prevention:
-- 
-
-
-
 ![IDOR Red](https://github.com/CyberDefender369/Web-Security-Pen-Testing-Live-Targets/assets/96165986/76ad34dd-9987-404c-8012-4ecde7d2b1ec)
+
+Prevention:
+- Encrypt data at rest and data in motion.
+- Employ strong ciphers.
+- Only gather reuqired data.
+- Deny by default.
+- Alerts.
