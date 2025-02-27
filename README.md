@@ -4,7 +4,6 @@
 
 This project documents web vulnerabilities, each originating from a different website, along with their corresponding exploitation techniques. Among the six potential exploits considered—Username Enumeration, Insecure Direct Object Reference (IDOR), SQL Injection (SQLi), Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF), and Session Hijacking/Fixation—three were successfully identified. Despite the relative simplicity, this project serves as a compelling demonstration of how easily websites and web-based applications can be exploited.
 
-
 ## Blue
 
 ### Vulnerability: Session Hijacking
@@ -26,13 +25,15 @@ This project documents web vulnerabilities, each originating from a different we
 - Check Login:
   - Verify that no credentials are needed to log in.
 
-![Session Hijacking Blue](https://github.com/CyberDefender369/Pen-Testing-Live-Targets/assets/96165986/318f8e00-791d-4c62-88a6-23d4f4d70991)
+![Session Hijacking Blue](https://github.com/user-attachments/assets/6d65d72a-68fa-4066-a234-1a53a3317002)
 
 #### Prevention: 
-- Ensure the session ID is a long and unique number to eliminate random guessing.
-- Confirm that the user-agent string used for a request matches the user-agent string at login.
-- Determine if the origin of a request is coming from the source origin, as well as where the request is going.
-
+- Generate a Secure Session ID:
+  - Make sure the session ID is a long and unique number to eliminate random guessing.
+- Verify User-Agent String:
+  - Ensure that the user-agent string used for a request matches the user-agent string at login.
+- Verify Request Origin:
+  - Ensure that the origin of a request is coming from the source origin, as well as where the request is going.
 
 ## Green
 
@@ -50,14 +51,15 @@ This project documents web vulnerabilities, each originating from a different we
 - Verify Payload:
   - Verify that the payload is displayed.
 
-![XSS Green](https://github.com/CyberDefender369/Web-Security-Pen-Testing-Live-Targets/assets/96165986/43148303-e7ba-415e-8d42-17417af126fe)
+![Green](https://github.com/user-attachments/assets/7fe92aaf-79d8-4f63-ac89-a586cf7e8cc3)
 
 #### Prevention:
-- Validate user input.
-- Sanitize data before output.
-- Encode output.
-- Apply allowlists and blocklists. 
-  
+- Validate User Input:
+  - Ensure that all user input is validated to prevent unauthorized access to sensitive information.
+- Sanitize Data Before Output:
+  - Sanitize the data before output to remove any malicious input.
+- Encode Output:
+  - Encode the output to ensure it is properly formatted.
 
 ## Red
 
@@ -71,11 +73,12 @@ This project documents web vulnerabilities, each originating from a different we
 - Identify Sensitive Information:
   - Note that ?id=10 and ?id=11 return sensitive information that was not intended for public disclosure.
 
-![IDOR Red](https://github.com/CyberDefender369/Web-Security-Pen-Testing-Live-Targets/assets/96165986/76ad34dd-9987-404c-8012-4ecde7d2b1ec)
+![Red](https://github.com/user-attachments/assets/814f7627-0be7-4fba-86a6-d453a2b02803)
 
 #### Prevention:
-- Encrypt data at rest and data in motion.
-- Employ strong ciphers.
-- Only gather required data.
-- Deny by default.
-- Alerts.
+- Encrypt Data:
+  - Encrypt data both at rest and in motion to ensure its confidentiality.
+- Employ Strong Ciphers:
+  - Use robust encryption ciphers to ensure data integrity.
+- Deny by Default:
+  - Implement a default-deny policy to restrict unauthorized access.
