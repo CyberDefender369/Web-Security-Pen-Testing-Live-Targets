@@ -8,7 +8,7 @@ This project documents web vulnerabilities, each originating from a different we
 
 ### Vulnerability: Session Hijacking
 
-#### Exploitation Steps:
+#### Exploitation Steps
 - Open Browsers:
   - Launch Firefox (target browser) and Edge (attacker browser).
 - Login on Firefox:
@@ -27,7 +27,7 @@ This project documents web vulnerabilities, each originating from a different we
 
 ![Session Hijacking Blue](https://github.com/user-attachments/assets/6d65d72a-68fa-4066-a234-1a53a3317002)
 
-#### Prevention: 
+#### Prevention
 - Generate a Secure Session ID:
   - Make sure the session ID is a long and unique number to eliminate random guessing.
 - Verify User-Agent String:
@@ -39,7 +39,7 @@ This project documents web vulnerabilities, each originating from a different we
 
 ### Vulnerability: Cross-Site Scripting (XSS)
 
-#### Exploitation Steps: 
+#### Exploitation Steps
 - Go to the Globitek Contact Page:
   - Navigate to the Globitek contact page.
 - Enter Details and Script:
@@ -53,7 +53,7 @@ This project documents web vulnerabilities, each originating from a different we
 
 ![Green](https://github.com/user-attachments/assets/7fe92aaf-79d8-4f63-ac89-a586cf7e8cc3)
 
-#### Prevention:
+#### Prevention
 - Validate User Input:
   - Ensure that all user input is validated to prevent unauthorized access to sensitive information.
 - Sanitize Data Before Output:
@@ -65,7 +65,7 @@ This project documents web vulnerabilities, each originating from a different we
 
 ### Vulnerability: Insecure Direct Object Reference (IDOR)
 
-#### Exploitation Steps: 
+#### Exploitation Steps
 - Change URL Parameter:
   - Change the URL parameter from ?id=1 to ?id=2.
 - Increment the Number:
@@ -75,7 +75,7 @@ This project documents web vulnerabilities, each originating from a different we
 
 ![Red](https://github.com/user-attachments/assets/814f7627-0be7-4fba-86a6-d453a2b02803)
 
-#### Prevention:
+#### Prevention
 - Encrypt Data:
   - Encrypt data both at rest and in motion to ensure its confidentiality.
 - Employ Strong Ciphers:
